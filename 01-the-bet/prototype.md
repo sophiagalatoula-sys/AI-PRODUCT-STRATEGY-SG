@@ -24,3 +24,4 @@ For a BNPL lender sitting on years of its own customer-profile and transaction d
 
 ## Kill Criteria
 <!-- When would you stop? What evidence would kill this bet? -->
+Kill this bet if, after a 90-day pilot on the higher-risk segment, the new model's decisions don't cut that segment's default rate by at least a third relative to today's rate, or if underwriters overturn the new model's verdict in more than half of the disagreement cases routed to manual review — evidence the model's signal selection isn't sound enough to trust, which would make auto-deciding the rest of the volume unsafe. Also kill it if the pilot's overall portfolio approval rate drops by more than a couple of points versus today's baseline, since recreating the original over-conservatism this initiative exists to fix would undo the entire strategic point of building it.
