@@ -56,10 +56,15 @@ At 1/5, this is the clear low point, and the gap is more literal than it might s
 
 
 ### 2. Vertical Competitor
-**Attacker:**
-**Vector:**
-**Time-to-threat:**
-**% of value at risk:**
+
+**Attacker:** Klarna 
+
+**Vector:** Vertical Competitor 
+
+**Time-to-threat:** Already live. This is a present threat, not a future one: Klarna is Greece's BNPL market leader today, specifically because it already solved the underwriting-dependency problem this initiative is trying to solve. 
+
+**% of value at risk:** ~50% (estimate). Klarna already holds the default choice of both the customers Helios Pay's own underwriting rejected and the merchants who prefer the higher-approval option. Closing the gap this initiative targets defends against further share loss more than it recovers ground Klarna already holds.
+
 
 ### 3. Adjacent Expansion
 **Attacker:**
