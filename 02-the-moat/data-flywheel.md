@@ -67,10 +67,15 @@ At 1/5, this is the clear low point, and the gap is more literal than it might s
 
 
 ### 3. Adjacent Expansion
-**Attacker:**
-**Vector:**
-**Time-to-threat:**
-**% of value at risk:**
+
+**Attacker:** Hellas Direct 
+
+**Vector:** Adjacent Expansion 
+
+**Time-to-threat:** ~12 months (estimate). Its Bank of Greece credit licence application is filed and expected to be granted within the year it was filed; product expansion would likely follow licensing, not precede it. 
+
+**% of value at risk:** ~20-25% (estimate). Limited today to the BNPL volume Hellas Direct currently routes through bank partners, Helios Pay included. The real exposure is losing that volume once Hellas Direct can originate credit itself instead of needing a bank partner for it. 
+
 
 ---
 
