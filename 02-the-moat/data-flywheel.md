@@ -45,10 +45,15 @@ At 1/5, this is the clear low point, and the gap is more literal than it might s
 ## Encroachment Threat Assessment
 
 ### 1. Platform Encroachment
-**Attacker:**
-**Vector:**
-**Time-to-threat:**
-**% of value at risk:**
+
+**Attacker:** Revolut 
+
+**Vector:** Platform Encroachment 
+
+**Time-to-threat:** Uncertain, but not distant. Revolut already has full Greek market access and a working BNPL product elsewhere in Europe — bringing it to Greece is an expansion decision, not a new-product build. No Greek launch has been confirmed. 
+
+**% of value at risk:** ~30-40% (estimate)
+
 
 ### 2. Vertical Competitor
 **Attacker:**
