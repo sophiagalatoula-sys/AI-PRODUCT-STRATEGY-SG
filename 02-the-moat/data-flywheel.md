@@ -83,9 +83,14 @@ At 1/5, this is the clear low point, and the gap is more literal than it might s
 
 *Your partner played the Big Tech attacker. What was their plan to kill you?*
 
-**Attacker:**
-**Attack vector (target the weakest loop):**
-**Weeks 1-4 - what they ship:**
-**Weeks 5-8 - how they poach users:**
-**Weeks 9-12 - why users don't come back:**
-**Your defense:**
+**Attacker:** Klarna — the vertical competitor, and the only one of the three named above that's already live rather than pending.
+
+**Attack vector (target the weakest loop):** Domain Context, scoring 1/5. BNPL applications still run against a bureau template built for higher-value, longer-tenor loans — blind to purchase amount and category, unable to weight a customer's own Helios Pay history over less relevant bureau-wide signal, and unable to give a new applicant a path to prove themselves on a small first purchase. Klarna already runs its own independent, BNPL-native credit assessment, so this is the one loop it doesn't need to build — only to keep exploiting.
+
+**Weeks 1-4 - what they ship:** Nothing new needs building — Klarna's independent, Tiresias-free BNPL underwriting is already live. What ships is sharper targeting: instant-approval marketing aimed specifically at merchants who've raised the decline rate as a problem, and at applicants Helios Pay's scorecard rejects for reasons that have nothing to do with real BNPL risk — thin file, no prior Helios Pay history, or a purchase amount and category the scorecard can't weigh properly.
+
+**Weeks 5-8 - how they poach users:** Merchants integrated with both providers route more checkout volume to Klarna by default, reinforcing the higher-approval reputation this initiative's own diagnostic already documents. Customers Helios Pay declines — including ones a domain-aware model would have approved — get approved by Klarna instead, and start building their repayment history there rather than with Helios Pay.
+
+**Weeks 9-12 - why users don't come back:** Once a customer has a working repayment history and an approved limit with Klarna, there's little reason to retry Helios Pay — Helios Pay's scorecard still can't offer a differentiated first-purchase path for a new or previously-declined customer, still can't weigh their own purchase behavior over bureau-wide history, and still has no domain-specific reason to say yes where it said no before. The switch becomes permanent by default, not by any deliberate choice the customer makes.
+
+**Your defense:** Ship the fix this loop is already pointed at — resolve the build-vs-buy decision toward the in-house AI-generated scorecard, so Helios Pay can weight its own transaction and repayment history above bureau-wide signal, extend new and previously-declined customers a real path to prove themselves on a smaller first purchase, and use purchase amount and category as direct scoring inputs. Every week that decision stays unresolved is a week Klarna's advantage on exactly this segment compounds for free.
