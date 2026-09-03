@@ -2,6 +2,8 @@
 
 ## Cost Model
 
+Basis: roughly 13,000 applications assessed per month, one scoring decision per application, a roughly 65% approval rate, and roughly 92% of approvals actually disbursed (around 7,800 funded loans per month, roughly 60% of applications) on an average ticket of roughly €250.
+
 | Cost Category | Per-User/Month | Notes |
 |--------------|----------------|-------|
 | Inference (primary model) | | |
