@@ -45,6 +45,8 @@ Tiered confidence, surfaced inside the underwriter review queue, with a human-in
 
 ## Reliability Contract
 
+Before the new scorecard replaces the legacy one in production, this same golden-dataset accuracy run also serves as a one-time pre-launch validation gate: the pipeline has to clear the accuracy target on a dedicated validation pass — confirming it scores applications correctly against the agreed scorecard, not just against its own prior behavior — before go-live, separate from the weekly cadence it moves to afterward.
+
 | Metric | Target | Measurement | Alert Threshold |
 |--------|--------|-------------|-----------------|
 | Accuracy | ≥97% | Weekly, full golden dataset, each row scored against its own Judge Type (Rule / LLM-as-Judge / Both) | <94% → pages the on-call underwriting lead; auto-decide is paused for new applications until root-caused |
