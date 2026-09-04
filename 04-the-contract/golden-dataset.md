@@ -47,13 +47,20 @@ Tiered confidence, surfaced inside the underwriter review queue, with a human-in
 
 | Metric | Target | Measurement | Alert Threshold |
 |--------|--------|-------------|-----------------|
-| Accuracy | | | |
-| Hallucination rate | | | |
-| Latency (p95) | | | |
-| Drift velocity | | | |
+| Accuracy | ≥97% | Weekly, full golden dataset, each row scored against its own Judge Type (Rule / LLM-as-Judge / Both) | <94% → pages the on-call underwriting lead; auto-decide is paused for new applications until root-caused |
+| Hallucination rate | <2% | Same weekly run, applied only to the explanation and holistic-judgment justification text — a faithfulness rubric checks whether every cited factor is actually present in the applicant's record | >5% → rolls back the responsible component — the explanation model or the holistic-judgment model, whichever produced the flagged text — to its last known-good version |
+| Latency (p95) | <3 seconds | Continuous production monitoring of the full pipeline: scorecard, explanation model, and holistic-judgment check | Sustained above 5 seconds for 5 minutes → pages on-call engineering; applications show a "decision pending" state rather than timing out silently |
+| Drift velocity | <1%/month | The monthly Portfolio review model's comparison of decisioning outcomes against applicant characteristics | Decline exceeds 2% in a single review cycle → triggers an off-cycle golden-dataset audit and a scorecard reweighting review by Credit Risk |
+
 
 ## HITL Architecture
 <!-- When does a human step in? What's the escalation path? -->
 
-## Red-Team Findings
-*What failure mode did your partner find that you missed?*
+## HITL Architecture
+
+**Trigger:** The holistic-judgment model disagrees with the new scorecard's decision (roughly 5% of applications), or a hard rule fires regardless of the scorecard's own confidence — a shared-device-fingerprint match or a data-validation failure on a required field.
+
+**Reviewer:** A rotating on-call underwriter.
+
+**Feedback loop:** Every underwriter decision and justification is logged as a labeled example. A weekly gold-set audit samples routed cases — confirmed decisions become new golden dataset rows, overturned ones flag a miss in the scorecard or the holistic-judgment model — and the results feed the monthly Portfolio review model's characteristic-reweighting recommendations.
+
