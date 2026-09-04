@@ -56,7 +56,7 @@ Tiered confidence, surfaced inside the underwriter review queue, with a human-in
 ## HITL Architecture
 <!-- When does a human step in? What's the escalation path? -->
 
-**Trigger:** The holistic-judgment model disagrees with the new scorecard's decision (roughly 5% of applications), or a hard rule fires regardless of the scorecard's own confidence — a shared-device-fingerprint match or a data-validation failure on a required field.
+**Trigger:** The holistic-judgment model disagrees with the new scorecard's decision (roughly 5% of applications), or a hard rule fires regardless of the scorecard's own confidence — a shared-device-fingerprint match or a data-validation failure on a required field. Separately, an applicant can bring an already auto-decided case back into review after the fact by contacting customer support, which is how an applicant who wants an explanation or contests a decision reaches a human today.
 
 **Reviewer:** A rotating on-call underwriter.
 
