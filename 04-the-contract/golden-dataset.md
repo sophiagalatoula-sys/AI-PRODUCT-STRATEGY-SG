@@ -24,13 +24,24 @@ Dataset health
 
 ## Confidence UX Design
 
-**Approach:** show uncertainty / tiered confidence / human-in-loop trigger
+The user here is the underwriter, not the applicant: applicants only ever see a decision and a plain-language reason, with no confidence indicator and no control surface, so the three tiers below describe what the underwriter's review queue shows for a case once it has already been routed to them.
 
-**High confidence (>90%):**
-**Medium confidence (70-90%):**
-**Low confidence (<70%):**
+**Approach:** show uncertainty / tiered confidence / human-in-loop trigger
+Tiered confidence, surfaced inside the underwriter review queue, with a human-in-the-loop trigger built into which cases ever reach that queue at all.
+
+**Confident (>90%):** The scorecard's decision is auto-applied and the case never enters the underwriter queue — there is nothing to review, so no confidence UI is shown to anyone at this tier.
+
+**Uncertain (50-90%):** The case appears in the queue with both scorecards' verdicts and the holistic-judgment model's reasoning shown side by side. No recommendation is pre-filled; the case is framed as worth a look rather than a clear call, and the underwriter works from the full record.
+
+**Not confident (<50%):** The case appears in the queue with no recommendation offered at all. This covers both genuinely low-confidence model output and cases routed by a hard rule (a fraud signal, a data-validation failure) that never had a confidence-scored recommendation to begin with. The screen is labeled as informational context only, and the underwriter reviews the case from scratch.
+
 
 **User control surface:**
+- Users adjust the confidence threshold: No — thresholds are set by the credit risk team as policy, not by individual underwriters.
+- Users see AI reasoning / drivers: Yes — both scorecards' verdicts and the holistic-judgment model's justification are shown in full for every case that reaches the queue.
+- Users correct & override outputs: Yes — every decision an underwriter makes on a routed case is itself the override; there is no separate override action because reviewing and deciding is the underwriter's whole job on these cases.
+- Corrections feed back into the model / dataset: Yes — underwriter decisions are logged as labeled training data and feed the recurring scorecard and holistic-judgment model retraining directly.
+
 
 ## Reliability Contract
 
