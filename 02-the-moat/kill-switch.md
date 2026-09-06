@@ -11,13 +11,17 @@
 
 ## Portability Score
 <!-- Ready / Partial / Locked -->
+**Partial**
+
 Not fully locked. The platform capability to run a real pilot already exists: Provenir can be configured to route a defined applicant segment to an alternate scorecard without needing Tiresias's involvement to set up. What's actually missing is the alternate scorecard itself — no validated in-house model exists yet, and no framework compares candidates against the same historical outcomes before risking live traffic on them. Separately, the *primary* live scorecard Helios Pay runs today only has its structure and weights adjusted through the annual, negotiated review with Statistical Decisions Hellas — the firm Helios Pay itself retains for this, now a Tiresias subsidiary, leaving no independent analytics relationship left in the market for either that scorecard or the bureau's own separate, unreviewable one. Asked today, "could Helios Pay pilot an alternate scorecard on a defined slice of traffic within 48 hours," the honest answer is closer to yes than the platform alone would suggest — the blocker isn't Provenir, it's not yet having a scorecard worth routing traffic to. This piloting question sits inside a bigger, still-open one: Credit Risk currently favors keeping Tiresias, but the business treats dropping it for BNPL altogether — the way Klarna already operates in Greece — as a real, unresolved question worth assessing, alongside the nearer-term step of having a Helios-Pay-only layer safely carry the decision for specific, well-evidenced segments (a proven repeat customer, or an applicant Tiresias was already queried for within the last 60 days) without a fresh bureau call.
 
-## If the primary vendor doubles pricing tomorrow:
+## Stress Scenarios
+
+**If the primary vendor doubles pricing tomorrow:**
 <!-- What's your 48-hour response? -->
 There is no cushion. No live alternative scorecard exists to shift volume to, and the one relationship that could push back on pricing or terms — Statistical Decisions Hellas — is now part of the vendor itself, not an independent counterweight. Helios Pay would have to absorb the cost in the short term, and the case for building an in-house scorecard would become sharply more urgent — but the Provider and Eval gaps above mean that case couldn't be executed on any fast timeline. The honest answer today is exposure, not resilience.
 
-## If the primary vendor ships a competing product:
+** If the primary vendor ships a competing product:**
 <!-- What's defensible that they can't replicate? -->
 This one isn't hypothetical — it has already happened. Tiresias built a BNPL-specific scorecard as a better product to sell alongside its original, mismatched one, and it absorbed the one independent analytics firm that might otherwise have given Helios Pay a second source of scorecard expertise. Paying for that "competing product" from the same vendor that now controls the market's only alternative doesn't reduce dependency — it deepens it. That's a structural reason the build-vs-buy decision leans toward build, not just a cost comparison between the two options.
 
