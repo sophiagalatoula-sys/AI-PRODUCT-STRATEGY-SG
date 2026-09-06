@@ -80,15 +80,7 @@ Ignore + monitor: 2 — the two off-platform applicant workarounds, both blocked
 
 Estimated hidden spend: not trackable today — this is free-tier or already-licensed tool use rather than a distinct budget line, and that invisibility is itself part of the finding, not a number worth inventing.
 
-**Roadmap Brief:** Five of the six workarounds trace back to the same root cause — a capability gap, not a trust or pricing problem. People aren't going around Helios Pay's product because they distrust what it produces; they've found things it doesn't do at all yet. The one exception is workflow, not capability: customer support already has the right answer, just not in a place that's faster to use than AI. The two workarounds worth ignoring for now aren't low-value, they're blocked by the same regulatory boundary this repo already tracks elsewhere — anything that edges toward giving applicants forward-looking, individualized guidance risks becoming a second regulated decision surface under Art. 6(2) and Annex III, a governance question to resolve deliberately rather than a feature to ship quietly. A second pattern sits in the Signal source column itself: four of the six were only ever surfaced through informal internal observation, not through any dedicated support-ticket tag, forum monitoring, or tool-usage review built to catch this. Shadow AI discovery itself is ad hoc at Helios Pay today — the workarounds aren't the only gap; so is the mechanism for finding them.
+**Roadmap Brief:** 
 
+Five of the six workarounds trace back to the same root cause — a capability gap, not a trust or pricing problem. People aren't going around Helios Pay's product because they distrust what it produces; they've found things it doesn't do at all yet. The one exception is workflow, not capability: customer support already has the right answer, just not in a place that's faster to use than AI. The two workarounds worth ignoring for now aren't low-value, they're blocked by the same regulatory boundary this repo already tracks elsewhere — anything that edges toward giving applicants forward-looking, individualized guidance risks becoming a second regulated decision surface under Art. 6(2) and Annex III, a governance question to resolve deliberately rather than a feature to ship quietly. A second pattern sits in the Signal source column itself: four of the six were only ever surfaced through informal internal observation, not through any dedicated support-ticket tag, forum monitoring, or tool-usage review built to catch this. Shadow AI discovery itself is ad hoc at Helios Pay today — the workarounds aren't the only gap; so is the mechanism for finding them.
 
-| Tool | Owner | Risk Level | Decision |
-|------|-------|-----------|----------|
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
-
-**Total tools found:**
-**Tools after triage:**
-**Estimated hidden spend:**
