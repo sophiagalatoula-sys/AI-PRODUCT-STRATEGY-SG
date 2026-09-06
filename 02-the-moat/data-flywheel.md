@@ -76,6 +76,7 @@ At 1/5, this is the clear low point, and the gap is more literal than it might s
 
 **% of value at risk:** ~20-25% (estimate). Limited today to the BNPL volume Hellas Direct currently routes through bank partners, Helios Pay included. The real exposure is losing that volume once Hellas Direct can originate credit itself instead of needing a bank partner for it. 
 
+These three don't stack cleanly into one number, but together they cover every route into this market: a platform with better data than Helios Pay will ever have on its own, a specialist that already solved the exact problem this initiative is trying to solve, and a partner-turned-competitor with a licence already in motion. None of the three depends on the others — Revolut's Greek BNPL plans are unconfirmed, Klarna doesn't need Hellas Direct's licence to keep winning, and Hellas Direct doesn't need Revolut's data to disintermediate a bank partner. The one place all three converge is the higher-risk segment this initiative is built around: it's the segment most exposed to a data-richer outsider, most already lost to a competitor with independent underwriting, and most likely to move if a trusted adjacent brand offers an easier yes.
 
 ---
 
