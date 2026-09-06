@@ -70,7 +70,9 @@ Not shipping agents this version — none of this pipeline's AI components pick 
 
 **Stats:** 
 Total tools found: 6. 
+
 Tools after triage (build candidates): 3 — the support-reference lookup, the sanctioned self-serve analytics layer, and the dispute-summarization tool. 
+
 Partner candidates: 1 — the legal-drafting tool for data-subject-access requests. 
 Ignore + monitor: 2 — the two off-platform applicant workarounds, both blocked less by feasibility than by real regulatory and gaming risk. 
 Estimated hidden spend: not trackable today — this is free-tier or already-licensed tool use rather than a distinct budget line, and that invisibility is itself part of the finding, not a number worth inventing.
