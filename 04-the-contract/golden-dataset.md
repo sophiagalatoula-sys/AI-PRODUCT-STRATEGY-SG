@@ -22,6 +22,7 @@ Dataset health
 - Edge cases: 7 (70.0%)
 - Judge mix: 50% rule / 30% LLM / 20% both
 
+**Adversarial rows included:** 3 (rows 7, 8, 9) — a manufactured repayment pattern, a shared-device-fingerprint fraud signal, and malformed input.
 
 ## Confidence UX Design
 
