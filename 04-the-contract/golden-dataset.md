@@ -20,9 +20,9 @@ Ten labeled test cases for the credit-decisioning system: the primary scorecard,
 Dataset health
 - Total: 10
 - Edge cases: 7 (70.0%)
+- Adversarial rows included: 3 (rows 7, 8, 9) — a manufactured repayment pattern, a shared-device-fingerprint fraud signal, and malformed input.
 - Judge mix: 50% rule / 30% LLM / 20% both
 
-**Adversarial rows included:** 3 (rows 7, 8, 9) — a manufactured repayment pattern, a shared-device-fingerprint fraud signal, and malformed input.
 
 ## Confidence UX Design
 
