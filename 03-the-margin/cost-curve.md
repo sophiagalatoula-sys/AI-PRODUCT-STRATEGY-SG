@@ -1,5 +1,18 @@
 # Cost Curve & Pricing Strategy
 
+## Packaging Decision — Leader, Filler, Killer
+
+**Leader:** The blended credit-decisioning scorecard — bureau-sourced characteristics combined with Helios Pay's own digital-footprint and transactional signals into a single scoring engine. Every BNPL application runs through it; it's the core intelligence the entire product depends on.
+
+**Filler:** The plain-language decision explanation generated from that same score, shown to the reviewing analyst and to the applicant. Cheap to produce on top of a score that already exists, and it applies to essentially every decision the system makes — it's what turns a number into something a person can actually act on or trust.
+
+**Killer:** Underwriter review for the cases where a holistic-judgment model — reading the applicant's full record and both scorecards' own outputs — disagrees with the new model's own decision. This is the one step that consumes real, expensive human time rather than automated compute, and it's deliberately reserved for a minority of applications rather than run on every one.
+
+**Percentage of users hitting the Killer:** Roughly 5% of applications (an illustrative estimate for how often the holistic-judgment model disagrees with the new scorecard's own decision — no pilot has run yet to confirm the real figure). Comfortably under the 70% threshold at which a feature should be folded into the standard flow rather than gated.
+
+**Bundle-or-add-on decision:** Gate it. Scoring and explanation run on every application as the standard, bundled flow; underwriter review stays reserved for the disagreement-routed minority. Extending it to every application would recreate the underwriting-capacity bottleneck this design exists to solve in the first place.
+
+
 ## Cost Model
 
 Basis: roughly 13,000 applications assessed per month, one scoring decision per application, a roughly 65% approval rate, and roughly 92% of approvals actually disbursed (around 7,800 funded loans per month, roughly 60% of applications) on an average ticket of roughly €250.
