@@ -63,9 +63,9 @@ Outcome-based, without a price change. The entire case for this capability rests
 ## Board One-Pager
 <!-- Before/After: Old SaaS revenue vs. AI usage revenue for your product -->
 
-**Before (traditional SaaS):** On the full 13,000-application monthly book at a 65% approval rate (~7,800 funded loans), revenue runs ~€109,200/month against ~€182,000/month in total cost — a gross margin of ~-€72,800/month, ~-67%.
+**Before (legacy scorecard, today):** On the full 13,000-application monthly book at a 65% approval rate (~7,800 funded loans), revenue runs ~€109,200/month against ~€182,000/month in total cost — a gross margin of ~-€72,800/month, ~-67%.
 
-**After (AI-enabled):** The same 13,000 applications/month, now approved at 69% (~8,250 funded loans) instead of 65%, plus the cost of risk avoided by cutting the higher-risk segment's default rate from ~28% to ~19%. Revenue rises to ~€115,500/month (+~5.8%) on the extra funded volume. Total cost, despite that extra volume, actually falls slightly to ~€176,800/month, because the ~€16,250/month in avoided defaults outweighs the added cost of funding ~450 more loans. Gross margin improves to ~-€61,300/month, ~-53%.
+**After (AI-enhanced model):** The same 13,000 applications/month, now approved at 69% (~8,250 funded loans) instead of 65%, plus the cost of risk avoided by cutting the higher-risk segment's default rate from ~28% to ~19%. Revenue rises to ~€115,500/month (+~5.8%) on the extra funded volume. Total cost, despite that extra volume, actually falls slightly to ~€176,800/month, because the ~€16,250/month in avoided defaults outweighs the added cost of funding ~450 more loans. Gross margin improves to ~-€61,300/month, ~-53%.
 
 **Net margin shift:** ~-67% to ~-53% — margin stays negative, but improves by roughly 14 percentage points, and the monthly loss narrows by ~€11,500 (~16%) in absolute terms while revenue simultaneously grows. This product doesn't reach profitability on decisioning quality alone — Non-AI COGS is still the dominant, unsolved problem — but the AI-enhanced model is unambiguously accretive: it grows the top line and shrinks the loss at the same time, which is the more complete version of the "margin percentage isn't the whole story" argument, since here both the percentage and the absolute euros move in the right direction together.
 
