@@ -4,7 +4,6 @@
 
 Ten labeled test cases for the credit-decisioning system: the primary scorecard, the plain-language explanation it generates, and the holistic-judgment model that independently checks every decision and flags the ~5% it disagrees with for underwriter review.
 
-Test cases:
  | # | Input | Expected Output | Edge Case? | Judge Type |
 |---|-------|----------------|-----------|-----------|
 | 1 | Prime applicant: 6 years of on-time utility, telecom, and existing-loan payments; stable income; low existing debt; €200 purchase over 4 instalments. | New scorecard: Approve, score ≥750. Explanation cites the repayment history and low debt ratio as the driving factors. | N | Rule |
