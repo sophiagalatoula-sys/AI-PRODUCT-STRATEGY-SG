@@ -39,11 +39,12 @@
 
 **Why this won't get copied in 6 months.**
 
-- **Data Flywheel Score:** __/20
-- **Weakest Loop:**
-- **Competitive Position:** [describe axes + placement]
-- **Encroachment Defense:**
-- **Vendor Portability:** Ready / Partial / Locked
+- **Data Flywheel Score:** 7/20
+- **Weakest Loop:** Domain Context (1/5) — BNPL applications still run against a bureau template built for a different kind of lending, blind to purchase amount and category as real risk signals.
+- **Competitive Position:** Trailing Klarna, Greece's BNPL leader, which already runs independent bureau-free underwriting live today. Also exposed to Revolut's platform-encroachment threat (global transactional data, Greek BNPL launch unconfirmed, ~30-40% of value at risk) and Hellas Direct's adjacent expansion (its own credit licence pending, ~12 months out, ~20-25% of value at risk).
+- **Encroachment Defense:** Resolve the build-vs-buy decision toward Helios Pay building its own AI-enhancement layer on top of the bureau relationship — weighting Helios Pay's own transaction and repayment history above bureau-wide signal, and giving new or previously-declined customers a real path to prove themselves on a smaller first purchase.
+- **Vendor Portability:** Partial
+
 
 → Details: [`02-the-moat/`](02-the-moat/)
 
@@ -53,11 +54,12 @@
 
 **Will this make money or bleed it?**
 
-- **Gross Margin (current):**
-- **Gross Margin (AI-adjusted):**
-- **Pricing Model:**
-- **Cascading Strategy:**
-- **Break-even at:**
+- **Gross Margin (current):** -66.7% (-$5.60/user)
+- **Gross Margin (AI-adjusted):** ~-53% (~-€61,300/month), up from ~-67% (~-€72,800/month) — margin stays negative but improves ~14 points as approval rate rises to 69% and the higher-risk segment's default rate falls from ~28% to ~19%
+- **Pricing Model:** Outcome-based, without a price change — flat ~4% merchant commission plus ~€4 fixed fee, unchanged; value is captured through volume and reduced credit losses rather than a new AI fee
+- **Cascading Strategy:** A small triage model generates every decision's plain-language explanation; a frontier-tier holistic-judgment model independently reviews every application and routes ~5% (where it disagrees with the scorecard) to underwriter review
+- **Break-even at:** Not yet modeled — Non-AI COGS remains the dominant cost driver, and both the current and AI-enhanced scenarios stay net-negative at today's volume (see `cost-curve.md`)
+
 
 → Details: [`03-the-margin/`](03-the-margin/)
 
@@ -67,11 +69,12 @@
 
 **Why users will trust a probabilistic system.**
 
-- **Reliability Target:**
-- **Golden Dataset:** __ rows, __ adversarial
-- **Confidence UX:** [approach]
-- **HITL Architecture:**
-- **Failure Mode Coverage:**
+- **Reliability Target:** ≥97% accuracy (weekly) · <2% hallucination rate · <3s p95 latency · <1%/month drift velocity
+- **Golden Dataset:** 10 rows, 3 adversarial (rows 7-9: a manufactured repayment pattern, a shared-device-fingerprint fraud signal, malformed input)
+- **Confidence UX:** Tiered confidence surfaced in the underwriter review queue — auto-applied above 90%, both scorecards' verdicts shown side by side at 50-90%, no recommendation offered below 50%
+- **HITL Architecture:** Triggered by holistic-judgment disagreement (~5% of applications) or a hard rule (shared-fingerprint match, data-validation failure); reviewed by a rotating on-call underwriter; every decision feeds back into the golden dataset via a weekly audit
+- **Failure Mode Coverage:** 70% of the golden dataset's rows are edge cases, spanning thin-file applicants, a marginal near-cutoff score, synthetic/manufactured repayment history, shared-device fraud signals, malformed input, and reapplication-frequency bias
+
 
 → Details: [`04-the-contract/`](04-the-contract/)
 
@@ -81,11 +84,12 @@
 
 **What breaks when this scales — and what compounds.**
 
-- **Compounding System:** [describe feedback loops]
-- **Governance Posture:** [approach]
-- **Shadow AI Status:** __ tools found, __ triaged
-- **Agent Boundaries:**
-- **Regulatory Exposure:**
+- **Compounding System:** 5 feedback loops identified — 1 active (fraud device/browser-fingerprint network intelligence), 3 broken by the same root cause (recursive learning, cross-domain signal transfer, and segment-calibration network intelligence all generate recommendations that Credit Risk isn't required to act on), 1 missing (merchant-risk network intelligence). Fix: every flagged candidate now gets a required adopt/defer/reject decision each monthly cycle, with a named accountable owner and an overdue-candidate count tracked in the existing audit cadence.
+- **Governance Posture:** High-risk under the EU AI Act (Art. 6(2), Annex III(5)(b)). Fully or substantially met: risk management (Art. 9), record-keeping (Art. 12), accuracy/robustness (Art. 15), right to explanation (Art. 86), human oversight (Art. 14). Real gaps: data governance/bias review (Art. 10), transparency to deployers (Art. 13), and deployer obligations/applicant notice (Art. 26).
+- **Shadow AI Status:** 6 tools found, 3 triaged as build candidates, 1 partner candidate, 2 flagged ignore + monitor
+- **Agent Boundaries:** No agents shipped in this version — every AI component is a single-inference classifier or generator that returns one output and stops; none chains tool calls or picks its own actions.
+- **Regulatory Exposure:** High-risk under the EU AI Act, plus GDPR Article 22 (no decision based solely on automated processing without recourse) and the EU Consumer Credit Directive's requirement to state a genuine decline reason.
+
 
 → Details: [`05-the-guardrails/`](05-the-guardrails/)
 
