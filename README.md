@@ -99,10 +99,11 @@
 
 **How you get this funded, shipped, and adopted.**
 
-- **Horizon 1 (Now):**
-- **Horizon 2 (Next):**
-- **Horizon 3 (Bet):**
-- **Board Narrative:** [1-sentence thesis]
-- **Key Metric:**
+- **Horizon 1 (Now):** Close the immediate decision gaps — the Art. 10 bias-review call with Legal, the historical dataset for shadow-mode testing, and the scorecard characteristic-source map — all shippable with existing capabilities
+- **Horizon 2 (Next):** Build and shadow-score the in-house model, pilot it live on a defined slice, grow the golden dataset past 10 rows, and instrument the defensibility KPI that proves (or disproves) the moat
+- **Horizon 3 (Bet):** Assess dropping Tiresias for BNPL entirely, and build the missing merchant-risk network-intelligence loop
+- **Board Narrative:** This is a share-defense play, not a new bet — Helios Pay already owns the data and the bureau relationship that could fix the approval-rate gap sending declined customers to Klarna, and every quarter without building on it is a quarter that gap compounds for free
+- **Key Metric:** Higher-risk segment default rate — 28% baseline, ≥1/3 reduction required by the 90-day pilot's kill criteria
+
 
 → Details: [`06-the-pitch/`](06-the-pitch/)
