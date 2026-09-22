@@ -51,9 +51,3 @@ This is a share-defense play, not a new bet: we already own the data and the bur
 **The ask:**
 Not defined in what's in front of you today — that's a real gap, not an oversight I'm papering over. What this needs, minimum: a named owner inside Credit Risk, dedicated data science resourcing for one quarter, and a decision from Legal on Art. 10 before anything ships live. I don't have visibility into what else is competing for that same team's time, so I can't tell you what pauses to fund this — that's the one question I need this room to help answer, not one I'm bringing pre-solved.
 
-## M1 Baseline vs. Now
-*Your 3-sentence AI strategy from Module 1 vs. what you'd say now:*
-
-**M1 baseline:**
-
-**Now:**
