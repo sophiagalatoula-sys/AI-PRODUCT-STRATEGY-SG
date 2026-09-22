@@ -59,6 +59,13 @@ A third AI feature sits outside this per-application cascade entirely: a monthly
 **Model:** seat-based / usage-based / outcome-based / hybrid
 Outcome-based, without a price change. The entire case for this capability rests on two outcomes — a higher approval rate and a lower default rate in the higher-risk segment — but neither outcome is metered or billed per unit; both are monetized automatically through the existing flat commission and fee as approved volume grows and losses fall. This is a deliberate decision to hold price fixed and compete on decisioning quality instead of introducing a new charge.
 
+## Alternatives Considered
+
+**Commission renegotiation:** Considered and set aside for now. Merchants already compare Helios Pay's approval rate unfavorably against Klarna at similar commission levels — raising commission today would likely push more merchants toward Klarna rather than fund this initiative, not defend against it. This isn't a permanently closed door: it may become viable to revisit once the approval-rate gap has actually closed and merchants have evidence of the improvement, but it isn't available as a lever today.
+
+**Attacking Non-AI COGS directly:** Reviewed across its components, not left unexamined. Funding cost was checked and no cheaper source of capital was found. Acquisition cost has already been reduced as far as identified — marketing spend was cut, with no further reduction found. Of the remaining Non-AI COGS components, credit losses is the one lever still open, and it's the one this bet directly targets: cutting the higher-risk segment's default rate from ~28% to ~19%. Within Non-AI COGS specifically, this initiative isn't one option among several untested ones — it's the remaining lever after the others were checked and ruled out.
+
+
 
 ## Board One-Pager
 <!-- Before/After: Old SaaS revenue vs. AI usage revenue for your product -->
@@ -67,6 +74,8 @@ Outcome-based, without a price change. The entire case for this capability rests
 
 **After (AI-enhanced model):** The same 13,000 applications/month, now approved at 69% (~8,250 funded loans) instead of 65%, plus the cost of risk avoided by cutting the higher-risk segment's default rate from ~28% to ~19%. Revenue rises to ~€115,500/month (+~5.8%) on the extra funded volume. Total cost, despite that extra volume, actually falls slightly to ~€176,800/month, because the ~€16,250/month in avoided defaults outweighs the added cost of funding ~450 more loans. Gross margin improves to ~-€61,300/month, ~-53%.
 
-**Net margin shift:** ~-67% to ~-53% — margin stays negative, but improves by roughly 14 percentage points, and the monthly loss narrows by ~€11,500 (~16%) in absolute terms while revenue simultaneously grows. This product doesn't reach profitability on decisioning quality alone — Non-AI COGS is still the dominant, unsolved problem — but the AI-enhanced model is unambiguously accretive: it grows the top line and shrinks the loss at the same time, which is the more complete version of the "margin percentage isn't the whole story" argument, since here both the percentage and the absolute euros move in the right direction together.
+**Net margin shift:** ~-67% to ~-53% — margin stays negative, but improves by roughly 14 percentage points, and the monthly loss narrows by ~€11,500 (~16%) in absolute terms while revenue simultaneously grows. This product doesn't reach profitability on decisioning quality alone — Non-AI COGS is still the dominant, unsolved problem — but the AI-enhanced model is unambiguously accretive: it grows the top line and shrinks the loss at the same time, which is the more complete version of the "margin percentage isn't the whole story" argument, since here both the percentage and the absolute euros move in the right direction together. 
+What this doesn't capture: an underwriting layer precise enough to price by segment, ticket size, and repeat behavior is also the prerequisite for expanding into merchant categories and higher-ticket purchases the current scorecard's blanket conservatism keeps out of reach today, and for capturing repeat-purchase lift from customers the model now has real evidence to trust. None of that is quantified here — it depends on a validated model and live pilot results this initiative hasn't produced yet — but it's a reason this margin math likely understates the initiative's long-run value, not a claim this analysis is already pricing in.
+
 
 
