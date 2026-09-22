@@ -13,7 +13,7 @@
 | **The Margin** | M3 | [x] | [`03-the-margin/`](03-the-margin/) |
 | **The Contract** | M4 | [x] | [`04-the-contract/`](04-the-contract/) |
 | **The Guardrails** | M5 | [x] | [`05-the-guardrails/`](05-the-guardrails/) |
-| **The Pitch** | M6 | [ ] | [`06-the-pitch/`](06-the-pitch/) |
+| **The Pitch** | M6 | [x] | [`06-the-pitch/`](06-the-pitch/) |
 
 
 ---
