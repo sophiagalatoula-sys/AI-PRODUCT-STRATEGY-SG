@@ -58,7 +58,7 @@
 - **Gross Margin (AI-adjusted):** ~-53% (~-€61,300/month), up from ~-67% (~-€72,800/month) — margin stays negative but improves ~14 points as approval rate rises to 69% and the higher-risk segment's default rate falls from ~28% to ~19%
 - **Pricing Model:** Outcome-based, without a price change — flat ~4% merchant commission plus ~€4 fixed fee, unchanged; value is captured through volume and reduced credit losses rather than a new AI fee
 - **Cascading Strategy:** A small triage model generates every decision's plain-language explanation; a frontier-tier holistic-judgment model independently reviews every application and routes ~5% (where it disagrees with the scorecard) to underwriter review
-- **Break-even at:** Not yet modeled — Non-AI COGS remains the dominant cost driver, and both the current and AI-enhanced scenarios stay net-negative at today's volume (see `cost-curve.md`)
+- **Break-even at:** Not reachable through this initiative alone — even eliminating defaults entirely in the higher-risk segment caps avoided losses at ~€50,500/month, ~€10,800 short of closing the AI-enhanced scenario's ~-€61,300/month gap; a real breakeven target requires extending default-rate improvement well beyond the ~10% higher-risk segment (see `cost-curve.md`)
 
 
 → Details: [`03-the-margin/`](03-the-margin/)
