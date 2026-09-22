@@ -22,6 +22,7 @@ Dataset health
 - Edge cases: 7 (70.0%)
 - Adversarial rows included: 3 (rows 7, 8, 9) — a manufactured repayment pattern, a shared-device-fingerprint fraud signal, and malformed input.
 - Judge mix: 50% rule / 30% LLM / 20% both
+- - Growth target: +2 new rows/month, sourced from the weekly gold-set audit's confirmed-decision and overturned-decision samples (see HITL Architecture's Feedback loop) — this dataset is an ongoing contract that grows with production volume, not a one-time v0 gate.
 
 
 ## Confidence UX Design
@@ -52,9 +53,21 @@ Before the new scorecard replaces the legacy one in production, this same golden
 | Metric | Target | Measurement | Alert Threshold |
 |--------|--------|-------------|-----------------|
 | Accuracy | ≥97% | Weekly, full golden dataset, each row scored against its own Judge Type (Rule / LLM-as-Judge / Both) | <94% → pages the on-call underwriting lead; auto-decide is paused for new applications until root-caused |
-| Hallucination rate | <2% | Same weekly run, applied only to the explanation and holistic-judgment justification text — a faithfulness rubric checks whether every cited factor is actually present in the applicant's record | >5% → rolls back the responsible component — the explanation model or the holistic-judgment model, whichever produced the flagged text — to its last known-good version |
+| Hallucination rate | <2% | Continuous, against logged production explanation and holistic-judgment justification text via the same faithfulness rubric, with the weekly golden-dataset run kept as a fixed regression gate alongside it — see Production-Scale Evaluation Regime below | >5% → rolls back the responsible component — the explanation model or the holistic-judgment model, whichever produced the flagged text — to its last known-good version |
 | Latency (p95) | <3 seconds | Continuous production monitoring of the full pipeline: scorecard, explanation model, and holistic-judgment check | Sustained above 5 seconds for 5 minutes → pages on-call engineering; applications show a "decision pending" state rather than timing out silently |
 | Drift velocity | <1%/month | The monthly Portfolio review model's comparison of decisioning outcomes against applicant characteristics | Decline exceeds 2% in a single review cycle → triggers an off-cycle golden-dataset audit and a scorecard reweighting review by Credit Risk |
+
+## Production-Scale Evaluation Regime
+
+The 10-row golden dataset above is a curated regression suite — built to catch known failure modes on demand, not to represent production-scale coverage. Addressing the recommendation to expand validation immediately, beyond growing that regression suite:
+
+**Production-scale evaluation set:** A separate, much larger evaluation dataset — targeting at least a few thousand logged production decisions, growing continuously rather than curated by hand — sampled from actual applications the pipeline has already scored (score, explanation, holistic-judgment justification, underwriter outcome where routed). This is what the statistical checks below are computed against; the 10-row golden dataset stays the hand-curated regression suite for known edge cases and doesn't attempt this scale.
+
+**Automated counterfactual tests:** For each key risk signal used in scoring (repayment history, digital-footprint signals, purchase amount/category once added, reapplication frequency), an automated test perturbs that one signal on a held-out applicant record and confirms the score moves in the expected direction and magnitude — catching a signal that's stopped mattering, or started mattering in the wrong direction, before it shows up as a live drift alert.
+
+**Continuous evaluation dashboards:** Beyond the weekly/monthly cadence in the Reliability Contract above, a standing dashboard tracks continuously: calibration curves (does a 750 score actually mean what it claims across score bands), fairness slices (approval and default-rate parity across the protected characteristics flagged in the Art. 10 bias review — age, gender, marital status — and across segment/cohort), drift alarms (feeding the same Drift velocity metric above, but visible continuously rather than only at the monthly review), and explanation-consistency checks (does the same applicant profile, scored twice, produce the same cited factors).
+
+**Hallucination rate, measured against production, not just the golden dataset:** The Reliability Contract's <2% target is still checked weekly against the 10-row golden dataset as a regression gate, but that alone doesn't represent live behavior at ~13,000 decisions/month. The same rubric-based faithfulness evaluator also runs continuously against logged production explanation and holistic-judgment justification text — turning <2% into a measured, ongoing production rate rather than a static promise checked only against ten hand-picked cases.
 
 
 ## HITL Architecture
