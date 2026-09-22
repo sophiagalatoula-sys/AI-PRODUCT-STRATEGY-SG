@@ -22,13 +22,13 @@
 
 **What we're building, for whom, why now.**
 
-- **Product:** Helios Pay — a Greek digital lender and the first BNPL provider in the Greek market, now second-largest after Klarna. This initiative enhances the credit-risk decisioning model with AI/ML and Helios Pay's own data, targeting a higher-risk applicant segment (~10% of monthly originations) defaulting at a high-20s% rate — an estimated €550,000–600,000 in preventable annual losses.
-- **AI Value Archetype:** Copilot
+- **Product:** Helios Pay — a Greek digital lender that was the first BNPL (buy-now-pay-later) provider in the Greek market, now the second-largest after Klarna. This diagnostic covers an initiative to enhance the credit-risk decisioning model with AI/ML and Helios Pay's own data — adding characteristics Tiresias (Greece's credit bureau) doesn't have, and skipping the cost of a bureau call in specific cases where Helios Pay's own data is already sufficient, without dropping the underlying bureau relationship Credit Risk depends on for market-wide credit history — and addressing a higher-risk applicant segment (~10% of monthly originations) defaulting at a rate in the high-20s percent, an estimated €550,000–600,000 in preventable losses per year.
+- - **AI Value Archetype:** Copilot
 - **Vulnerability Scores:** Moat 2/5 · Data 2/5 · Platform 4/5
 - **Top Risk:** Data Advantage (2/5) — the upstream cause behind the eroded Contextual Moat. Helios Pay's own years of BNPL loan-outcome data helped build the bureau's BNPL-specific scorecard, but that value compounds for the bureau, not for Helios Pay, which still can't see inside or correct it.
 - **Confidence:** M
 - **Prototype:** [Credit Decision Console](https://claude.ai/code/artifact/a63d5335-d609-4a88-b756-920464dc35d7)
-- **Kill Criteria:** Kill if a 90-day pilot doesn't cut the higher-risk segment's default rate by at least a third, if underwriters overturn more than half of routed decisions, or if overall approval rate drops more than a couple of points versus baseline.
+- **Kill Criteria:** Before the 90-day live pilot, the model must clear a shadow-mode check against historical applications — at least a 20% projected reduction in the higher-risk segment's default rate — or the pilot doesn't start. Kill the live pilot itself if it doesn't cut the higher-risk segment's default rate by at least a third, if underwriters overturn more than half of routed decisions, or if overall approval rate drops more than a couple of points versus baseline.
 
 
 → Details: [`01-the-bet/`](01-the-bet/)
