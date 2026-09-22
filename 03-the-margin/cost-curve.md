@@ -65,6 +65,18 @@ Outcome-based, without a price change. The entire case for this capability rests
 
 **Attacking Non-AI COGS directly:** Reviewed across its components, not left unexamined. Funding cost was checked and no cheaper source of capital was found. Acquisition cost has already been reduced as far as identified — marketing spend was cut, with no further reduction found. Of the remaining Non-AI COGS components, credit losses is the one lever still open, and it's the one this bet directly targets: cutting the higher-risk segment's default rate from ~28% to ~19%. Within Non-AI COGS specifically, this initiative isn't one option among several untested ones — it's the remaining lever after the others were checked and ruled out.
 
+## Break-Even Target
+
+Since pricing is deliberately fixed (see Pricing Model above), the entire path to a positive gross margin runs through the cost side — specifically, how far default-rate improvement can go, and across how much of the book.
+
+**What one point of default-rate improvement is worth today:** the higher-risk segment (~1,300 of 13,000 monthly applications) improving from a 28% to a 19% default rate — a 9-point reduction — avoids approximately €16,250/month in credit losses (see Board One-Pager). That's roughly €1,800/month per point of default-rate improvement, within this segment specifically.
+
+**The ceiling on this segment alone:** even in the best case — this segment's default rate driven all the way to 0%, a full 28-point reduction — the maximum credit-loss avoidance from it is approximately €50,500/month (28 × ~€1,800). That's the absolute ceiling this initiative can deliver by improving the higher-risk segment alone, however well the model performs.
+
+**Why that's not enough:** the AI-enhanced scenario's remaining monthly gross margin gap is approximately -€61,300/month. Even zeroing out defaults in the higher-risk segment entirely falls roughly €10,800/month short of closing it. Gross margin cannot reach positive through this initiative's current scope alone, even directionally — the segment it targets is only ~10% of originations, and the rest of the book's cost structure is untouched by it and, per Alternatives Considered above, isn't reducible through other means currently available.
+
+**What a real path to positive margin would require:** extending default-rate improvement, or an equivalent underwriting-precision gain, to a meaningfully larger share of the ~13,000 monthly applications — not just the ~10% this initiative currently scopes to. That's a materially larger bet than the one currently kill-criteria'd and piloted, not something the current 90-day pilot delivers on its own.
+
 
 
 ## Board One-Pager
